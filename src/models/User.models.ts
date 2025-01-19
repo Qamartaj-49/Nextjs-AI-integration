@@ -26,8 +26,8 @@ const MessageSchema: Schema<Message> = new Schema({
     verifiedCode:string;
     verifyCodeExpiry:Date;
     isVerified:boolean;
-    isAcceptingmessage:boolean; 
-    message:Message[];
+    isAcceptingMessage:boolean; 
+    messages:Message[];
   }
 
   //User schema
@@ -59,11 +59,11 @@ const MessageSchema: Schema<Message> = new Schema({
       type: Boolean,
       default: false,
     },
-    isAcceptingmessage:{
+    isAcceptingMessage:{
       type: Boolean,
       required: true
     },
-    message:[MessageSchema]
+    messages:[MessageSchema]
   })
 
   
